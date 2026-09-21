@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Blog content architecture diagram">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef3ff"/>
+      <stop offset="100%" stop-color="#f7f9fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="640" fill="url(#bg)"/>
+  <rect x="64" y="72" width="320" height="496" rx="24" fill="#ffffff" stroke="#e2e7ef" stroke-width="2"/>
+  <text x="96" y="128" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="700" fill="#0b1220">content/blog/</text>
+  <text x="96" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#475569">my-post/</text>
+  <text x="120" y="224" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#0052ff">index.md</text>
+  <text x="120" y="272" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#475569">images/</text>
+  <text x="144" y="320" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#64748b">cover.jpg</text>
+  <path d="M420 320 H520" stroke="#1f5eff" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="520,308 548,320 520,332" fill="#1f5eff"/>
+  <rect x="560" y="200" width="560" height="240" rx="24" fill="#070d1a"/>
+  <text x="600" y="280" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Next.js /blog/[slug]</text>
+  <text x="600" y="328" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#8aaaff">markdown → HTML at build</text>
+  <text x="600" y="376" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#94a3b8">SEO · lazy images · shared chrome</text>
+</svg>
