@@ -1,9 +1,9 @@
 "use client";
 
+import { button } from "@/components/ui/buttons";
+import { profile } from "@/content/profile";
 import { CheckCircle2, Loader2, Send, XCircle } from "lucide-react";
 import { type FormEvent, useId, useRef, useState } from "react";
-import { profile } from "@/content/profile";
-import { button } from "@/components/ui/buttons";
 
 type Status =
   | { state: "idle" }
@@ -196,7 +196,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`${button.primary} ${button.sizes.md} flex-1`}
+          className={`${button.primary} ${button.sizes.md} sm:flex-1`}
         >
           {isSubmitting ? (
             <Loader2 className="size-4 animate-spin" aria-hidden="true" />
