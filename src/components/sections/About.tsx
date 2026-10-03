@@ -116,7 +116,7 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="relative scroll-mt-24 border-t border-ink-200/60 bg-paper-2/60 py-24 sm:py-28 lg:py-32"
+      className="relative scroll-mt-24 overflow-x-clip border-t border-ink-200/60 bg-paper-2/60 py-24 sm:py-28 lg:py-32"
     >
       <div className="container-page grid gap-14 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
