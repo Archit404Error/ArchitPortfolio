@@ -10,13 +10,13 @@ interface SplitTextProps {
 }
 
 export const splitWord: Variants = {
-  hidden: { y: "115%", rotate: 3, opacity: 0 },
+  hidden: { y: "125%", rotate: 3, opacity: 0 },
   show: {
     y: 0,
     rotate: 0,
     opacity: 1,
     transition: {
-      duration: ANIMATION_DURATIONS.slow + 0.1,
+      duration: ANIMATION_DURATIONS.slow,
       ease: EASE_OUT_ANIMATION,
     },
   },
@@ -31,7 +31,7 @@ export function SplitText({ text, className, wordClassName }: SplitTextProps) {
         {words.map((word, index) => (
           <span
             key={`${word}-${index}`}
-            className="inline-block overflow-hidden px-[0.04em] -mx-[0.04em] pb-[0.16em] -mb-[0.16em] align-top"
+            className="inline-block px-[0.04em] -mx-[0.04em] pb-[0.16em] -mb-[0.16em] align-top"
           >
             <motion.span
               variants={splitWord}
