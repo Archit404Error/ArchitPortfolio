@@ -14,7 +14,7 @@ export interface Book {
   note?: string;
   cover?: string;
   url?: string;
-  spine?: string;
+  spine: string;
 }
 
 export const bookStatusLabel: Record<BookStatus, string> = {
@@ -25,12 +25,22 @@ export const bookStatusLabel: Record<BookStatus, string> = {
 
 export const bookshelf: Book[] = [
   {
+    title: "Moby Dick",
+    author: "Herman Melville",
+    status: "finished",
+    year: 2026,
+    rating: 4,
+    note: "The ocean has no master.",
+    spine: "#10223b",
+  },
+  {
     title: "The Wealth of Nations",
     author: "Adam Smith",
     status: "finished",
     year: 2026,
     rating: 5,
     note: "As expected, Capitalism from first principles is a pretty great read.",
+    spine: "#1f3a5f",
   },
   {
     title: "Zero to One",
@@ -39,6 +49,7 @@ export const bookshelf: Book[] = [
     year: 2026,
     rating: 5,
     note: "The most contrarian thing of all is not to oppose the crowd, but to think for yourself.",
+    spine: "#0040d1",
   },
   {
     title: "The Count of Monte Cristo",
@@ -47,6 +58,7 @@ export const bookshelf: Book[] = [
     year: 2024,
     rating: 5,
     note: "All human wisdom is contained in these two words: 'wait and hope.'",
+    spine: "#0b1220",
   },
   {
     title: "Elon Musk",
@@ -55,6 +67,7 @@ export const bookshelf: Book[] = [
     year: 2023,
     rating: 4.5,
     note: "Well written with interesting core themes; would have loved to hear more about the early days of Musk's first startup",
+    spine: "#5a3e2b",
   },
   {
     title: "The Pragmatic Programmer",
@@ -63,6 +76,7 @@ export const bookshelf: Book[] = [
     year: 2022,
     rating: 5,
     note: "A seminal engineering text that forever improved the way I think about and write code.",
+    spine: "#3b4252",
   },
   {
     title: "Steve Jobs",
@@ -70,6 +84,7 @@ export const bookshelf: Book[] = [
     rating: 5,
     status: "finished",
     note: "The greatest tech entrepreneur of all time.",
+    spine: "#7a2e2e",
   },
 ];
 
