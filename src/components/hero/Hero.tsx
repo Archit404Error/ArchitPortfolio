@@ -43,7 +43,9 @@ const entranceVariants: Variants = {
 
 const headlineVariants: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: STAGGER_INTERVALS.base } },
+  show: {
+    transition: { staggerChildren: STAGGER_INTERVALS.base },
+  },
 };
 
 export function Hero() {

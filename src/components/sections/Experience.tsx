@@ -106,7 +106,7 @@ function TimelineEntry({
 
       <motion.article
         variants={roleCardVariants}
-        className="group relative -mx-4 rounded-[var(--radius-card-lg)] px-4 py-1 transition-colors duration-300 hover:bg-surface/70 sm:-mx-6 sm:px-6"
+        className="group relative -mx-4 rounded-[var(--radius-card-lg)] px-4 py-1 transition-colors duration-300 sm:-mx-6 sm:px-6"
       >
         <header className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
           <div className="min-w-0">
