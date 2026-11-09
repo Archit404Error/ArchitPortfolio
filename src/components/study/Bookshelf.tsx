@@ -24,17 +24,6 @@ import {
 import Image from "next/image";
 import { type KeyboardEvent, useId, useRef, useState } from "react";
 
-const BOOK_SPINE_COLORS = [
-  "#0b1220",
-  "#0040d1",
-  "#5a3e2b",
-  "#2f4f3e",
-  "#7a2e2e",
-  "#3b4252",
-  "#8a6d1f",
-  "#1f3a5f",
-];
-
 function hashString(value: string) {
   let hash = 0;
 
@@ -43,13 +32,6 @@ function hashString(value: string) {
   }
 
   return Math.abs(hash);
-}
-
-export function spineColor(book: Book) {
-  return (
-    book.spine ??
-    BOOK_SPINE_COLORS[hashString(book.title) % BOOK_SPINE_COLORS.length]
-  );
 }
 
 export function spineWidth(book: Book) {
@@ -108,7 +90,6 @@ export function Spine({
   describedBy?: string;
 }) {
   const prefersReducedMotion = useReducedMotion();
-  const color = spineColor(book);
   const width = compact ? spineWidth(book) * 0.7 : spineWidth(book);
   const height = compact ? "h-32" : "h-44 sm:h-56";
 
@@ -153,7 +134,7 @@ export function Spine({
     return (
       <motion.span
         variants={bookVariants}
-        style={{ width, backgroundColor: color }}
+        style={{ width, backgroundColor: book.spine }}
         className={className}
         aria-hidden="true"
       >
@@ -179,7 +160,7 @@ export function Spine({
         selected && !prefersReducedMotion ? { y: -16, rotate: 0 } : undefined
       }
       transition={SPRING_POP}
-      style={{ width, backgroundColor: color }}
+      style={{ width, backgroundColor: book.spine }}
       className={`${className} cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:ring-offset-paper`}
     >
       <span className="sr-only">
@@ -427,7 +408,7 @@ export function Bookshelf({ books }: { books: Book[] }) {
                 ) : (
                   <div
                     className="relative flex aspect-[2/3] w-36 shrink-0 items-end overflow-hidden rounded-[4px] p-3 shadow-[0_24px_40px_-20px_rgb(43_36_24/0.5)] sm:w-40"
-                    style={{ backgroundColor: spineColor(selectedBook) }}
+                    style={{ backgroundColor: selectedBook.spine }}
                     aria-hidden="true"
                   >
                     <span className="absolute inset-y-0 left-0 w-1.5 bg-black/20" />
